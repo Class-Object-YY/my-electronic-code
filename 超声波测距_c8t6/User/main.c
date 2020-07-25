@@ -33,8 +33,10 @@ int main(void)
 	{
 	feed=20-HC_SR04_get_data();
 	printf("\r\n**%f**\r\n",feed);	
-	p_i_d=pid_calculate(30,0,1.2,feed);			
-  uuu=p_i_d+750;
+//	p_i_d=pid_calculate(30,0,1.2,feed);	
+//		p_i_d=pid_calculate(15,80,0.01,feed);	  13
+		p_i_d=pid_calculate(10.5,110,0.05,feed);	
+  uuu=p_i_d+700;
 	CCR3_Val=(uint16_t)uuu;
    if(uuu<=0||uuu>3000)
 	 {
