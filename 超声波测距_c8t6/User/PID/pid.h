@@ -2,7 +2,7 @@
 #define	__PID_H
 
 
-#define pid_standard    5
+#define pid_standard    5 
 #define pid_cycle      55     //ms
 #define pid_nom        0 
 
